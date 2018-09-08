@@ -10,11 +10,11 @@ namespace Palindrom
     {
         public static bool IsPalindrom(string word)
         {
-            word = word.ToLower();
+            var newWord = word.ToLower().Replace(" ", "");
             var result = true;
-            for (var i = 0; i < word.Length / 2; i++)
+            for (var i = 0; i < newWord.Length / 2; i++)
             {
-                if (word[i] != word[word.Length - 1 - i])
+                if (newWord[i] != newWord[newWord.Length - 1 - i])
                 {
                     result = false;
                 }

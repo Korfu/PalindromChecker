@@ -18,7 +18,7 @@ namespace Palindrom.Tests
             string word = "a";
             
             //Act
-            bool result = Program.IsPalindrom(word);
+            bool result = PalindromChecker.IsPalindrom(word);
 
             //Assert
             Assert.AreEqual(result,true);
@@ -31,7 +31,20 @@ namespace Palindrom.Tests
             string word = "kajak";
 
             //Act
-            bool result = Program.IsPalindrom(word);
+            bool result = PalindromChecker.IsPalindrom(word);
+
+            //Assert
+            Assert.AreEqual(result, true);
+        }
+
+        [Test]
+        public void IsSentenceAPalindrom()
+        {
+            //Arrange
+            string word = "I mała dama sama dała mi";
+
+            //Act
+            bool result = PalindromChecker.IsPalindrom(word);
 
             //Assert
             Assert.AreEqual(result, true);
